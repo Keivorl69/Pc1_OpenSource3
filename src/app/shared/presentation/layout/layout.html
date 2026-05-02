@@ -1,0 +1,16 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <img [src]="appLogo" alt="Logo" style="height: 40px; margin-right: 10px;"/>
+      <span>SportsFYI</span>
+      <span class="spacer"></span>
+      <span>
+      <app-language-switcher></app-language-switcher>
+    </span>
+  </mat-toolbar>
+    <h1>{{'title' |translate}}</h1>
+    <app-team-list [teams]="teams()"></app-team-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer>  </app-footer>

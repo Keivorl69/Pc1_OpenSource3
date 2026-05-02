@@ -1,0 +1,30 @@
+<mat-card class="article-card">
+
+  <img
+    mat-card-image [alt]="team().strTeam" [src]="team().strLogo"/>
+
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ team().strTeam }}</mat-card-title>
+      <mat-card-subtitle>{{ team().strSport}}</mat-card-subtitle>
+
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p> Country:{{ team().strCountry }}</p>
+    <p> Stadium:{{ team().strStadium }}</p>
+    <p> Description: {{ team().strDescriptionEN }}</p>
+
+  </mat-card-content>
+  <mat-card-actions class="actions-section">
+    <a [href]="'https://' + team().strWebsite" class="action-button"
+       target="_blank">{{'view-team' | translate}}
+    </a>
+    <button (click)="copyToClipboard(team().strWebsite)">
+      {{ 'share-team' | translate}}
+    </button>
+    <span class="default-spacer"></span>
+
+    <a href=""></a>
+  </mat-card-actions>
+</mat-card>
